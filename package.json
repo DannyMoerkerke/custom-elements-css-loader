@@ -1,0 +1,20 @@
+{
+  "name": "custom-elements-loader",
+  "version": "1.0.0",
+  "description": "Webpack loader for Custom Elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/dannymoerkerke/custom-elements-loader.git"
+  },
+  "author": "Danny Moerkerke <danny@dannymoerkerke.nl>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/dannymoerkerke/custom-elements-loader#readme",
+  "dependencies": {
+    "autoprefixer": "^9.1.5",
+    "postcss": "^7.0.5"
+  }
+}
