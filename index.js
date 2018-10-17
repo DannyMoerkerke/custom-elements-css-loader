@@ -22,18 +22,11 @@ module.exports = source => {
 
     const tagNameRegex = /customElements\.define\('(.+?)'/gm;
     const tagName = tagNameRegex.exec(source)[1];
-
-    // matches all rules that do not start with "from" or "to" (which are keyframe rules)
     const ruleRegex = /^(?!\s*(from|to))([\sa-zA-Z0-9\-_*()\[\]#.:,]*?){([\s\S]*?)}$/gm;
     const ruleStartRegex = /(\s+)([\s\S]*){/;
-
-    // matches all rules that do NOT start with :host or ::slotted (these should not be prefixed with the tagname of the
-    // custom element
     const notHostOrSlottedRegex = /^(?!(:host|::slotted))[\s\S]*$/;
     const slottedRegex = /::slotted\((.+?)\)/gm;
     const hostRegex = /:host(\((.+?)\)(.+?)|\s){/gm;
-
-    // const callback = this.async();
 
     const orgStyle = styleResult[1];
     let style = styleResult[1];
@@ -72,13 +65,6 @@ module.exports = source => {
 
         if(slottedResult) {
             style = style.replace(slottedResult[0], `${tagName} ${slottedResult[1]}`);
-
-            while(slottedRegex.lastIndex) {
-                slottedResult = slottedRegex.exec(style);
-                if(slottedResult) {
-                    style = style.replace(slottedResult[0], `${tagName} ${slottedResult[1]}`);
-                }
-            }
         }
     } while(slottedResult);
 
@@ -104,13 +90,9 @@ module.exports = source => {
 
     source = source.replace(orgStyle, style);
 
-    return source;
+    const prefixed = prefixer.process(style).css;
 
-    // prefixer.process(style)
-    // .then(result => {
-    //     source = source.replace(styleResult[1], result);
-    //
-    //     callback(null, source);
-    // })
-    // .catch(err => callback(err));
+    source = source.replace(orgStyle, prefixed);
+
+    return source;
 };
