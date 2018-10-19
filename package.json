@@ -1,7 +1,7 @@
 {
-  "name": "custom-elements-loader",
+  "name": "custom-elements-css-loader",
   "version": "1.0.0",
-  "description": "Webpack loader for Custom Elements",
+  "description": "Webpack loader for Custom Elements css",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
