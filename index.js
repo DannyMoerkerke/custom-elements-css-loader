@@ -88,7 +88,6 @@ module.exports = source => {
         }
     } while(hostResult);
 
-    source = source.replace(orgStyle, style);
 
     const prefixed = prefixer.process(style).css;
 
