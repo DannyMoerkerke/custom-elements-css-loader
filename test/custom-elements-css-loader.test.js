@@ -1,7 +1,7 @@
 const loader = require('../index');
 const expect = require('chai').expect;
 
-describe('custom-elements-loader', () => {
+describe('custom-elements-css-loader', () => {
 
     const getSource = css => `
         export default class CustomElement extends HTMLElement {
