@@ -1,18 +1,18 @@
 {
   "name": "custom-elements-css-loader",
   "version": "1.0.0",
-  "description": "Webpack loader for Custom Elements css",
+  "description": "Webpack loader for Custom Elements CSS",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/dannymoerkerke/custom-elements-loader.git"
+    "url": "git+ssh://git@github.com:DannyMoerkerke/custom-elements-css-loader.git"
   },
   "author": "Danny Moerkerke <danny@dannymoerkerke.nl>",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/dannymoerkerke/custom-elements-loader#readme",
+  "homepage": "https://github.com/DannyMoerkerke/custom-elements-css-loader",
   "dependencies": {
     "autoprefixer": "^9.1.5",
     "chai": "^4.2.0",
