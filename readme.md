@@ -5,7 +5,8 @@ DOM for browsers that don't support
 [Custom Elements V1](https://caniuse.com/#feat=custom-elementsv1)
 
 The creation of Custom Elements (Web Components) can easily be polyfilled
-with webcomponentsjs but to make sure that the CSS inside Shadow DOM
+with [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs)
+but to make sure that the CSS inside Shadow DOM
 works correctly, the Shady CSS polyfill will need to be used which means
 that the source code will also need some modification.
 
