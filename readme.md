@@ -20,6 +20,9 @@ element to provide proper scoping.
 After that it parses all `::host` and `::slotted` rules to make sure
 these also work correctly.
 
+Note that this loader only works for browsers that do NOT support Shadow
+DOM.
+
 ## How to use
 Install with npm:
 
